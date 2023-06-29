@@ -1,2 +1,2 @@
 # Calculate
-<img src="./gif-cal.gif">
+<img src=".Calculate/gif-calc.gif">
