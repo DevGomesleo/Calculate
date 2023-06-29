@@ -6,15 +6,16 @@ using System.Security;
 class Program
 {
         static int num = 9999;
+        static string design = "------------------------\n";
     static void Main()
     {
         while (num != 0)
         {
             string back = "";
             comeback:;
-            string design = "------------------------\n";
+            
             Console.WriteLine($"\n{design}Welcome To My program!!!\n{design}");
-            Console.WriteLine($"CALCULATE:\n{design}[1]Sum\n[2]Subtract\n[3]Multiply\n[4]Divide\n[0]Exit\n{design}");
+            Console.WriteLine($"CALCULATE:\n{design}[1]Sum\n[2]Subtraction\n[3]Multiplication\n[4]Division\n[0]Exit\n{design}");
             Console.Write("Choice The Option: ");
 
             num = int.Parse(Console.ReadLine()); // "System.FormatException"
@@ -32,9 +33,12 @@ class Program
                 {
                     num = 9999;
                     Console.Clear();
+
                     goto comeback;
                 }
+
                 Console.WriteLine($"{design}Ends game\n{design}");
+                Console.ReadLine();
 
                 break;
             }else if
@@ -49,45 +53,44 @@ class Program
                         Console.Write("Enter the Second Number: ");
                         value_two = int.Parse(Console.ReadLine());
                         x = value_one + value_two;
-                        Console.WriteLine($"The sun between {value_one} + {value_one} = {x}\n");
+                        Console.WriteLine($"The sum between {value_one} + {value_one} = {x}\n");
                         break;
                     case 2:
-                        Console.WriteLine("Welcome to [SUBTRACT]");
+                        Console.WriteLine("Welcome to [SUBTRACTION]");
                         Console.Write("Enter the First Number: ");
                         value_one = int.Parse(Console.ReadLine());
                         Console.Write("Enter the Second Number: ");
                         value_two = int.Parse(Console.ReadLine());
                         x = value_one - value_two;
-                        Console.WriteLine($"The Subtract between {value_one} - {value_one} = {x} \n");
+                        Console.WriteLine($"the Subtraction between {value_one} - {value_one} = {x} \n");
                         break;
                     case 3:
-                        Console.WriteLine("Welcome to [MULTIPLY]");
+                        Console.WriteLine("Welcome to [MULTIPLICATION]");
                         Console.Write("Enter the First Number: ");
                         value_one = int.Parse(Console.ReadLine());
                         Console.Write("Enter the Second Number: ");
                         value_two = int.Parse(Console.ReadLine());
                         x = value_one * value_two;
-                        Console.WriteLine($"The Multiply between {value_one} x {value_one} = {x}\n");
+                        Console.WriteLine($"the Multiplication between {value_one} x {value_one} = {x}\n");
                         break;
                     case 4:
-                        Console.WriteLine("Welcome to [DIVIDE]");
+                        Console.WriteLine("Welcome to [DIVISION]");
                         Console.Write("Enter the First Number: ");
                         value_one = int.Parse(Console.ReadLine());
                         Console.Write("Enter the Second Number: ");
                         value_two = int.Parse(Console.ReadLine());
                         x = value_one / value_two;
-                        Console.WriteLine($"The Divide between {value_one} / {value_one} = {x}\n");
+                        Console.WriteLine($"the Division between {value_one} / {value_one} = {x}\n");
                         break;
                 }
+                num = 0;
+                goto verific;
             }
-
-            num = 0;
-            goto verific;
-            
-            
+  
 
         }
-       
 
+        
     }
+     
 }
