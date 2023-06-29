@@ -3,4 +3,4 @@
 
 Program Running....
 
-<img src="./Calculate/gif-calc.gif">
+<img src="./Calculate/gif.gif">
